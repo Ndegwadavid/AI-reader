@@ -12,7 +12,7 @@ create a virtual environment
 ---
 install the required dependencies
 ---
-    pip install Flask, requests beautifulsoup4 nltk networkx numpy
+    pip install Flask requests beautifulsoup4 nltk networkx numpy scipy
 ---
 
 #### Run the flask app 
