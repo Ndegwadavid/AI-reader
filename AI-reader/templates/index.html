@@ -9,7 +9,28 @@
         body {
             background-color: #f8f9fa;
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        .landing {
+            position: relative;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?ai') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .landing-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .landing-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
         }
         .container {
             max-width: 800px;
@@ -26,19 +47,46 @@
         form {
             margin-bottom: 20px;
         }
+        .developer {
+            margin-top: 50px;
+        }
+        .developer img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .developer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
+    <div class="landing">
+        <div class="landing-text">
+            <h1>Welcome to Article Summarizer</h1>
+            <form id="summarizeForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="url" name="url" placeholder="Enter Article URL" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Summarize</button>
+            </form>
+        </div>
+    </div>
+
     <div class="container">
-        <h1>Article Summarizer</h1>
-        <form id="summarizeForm">
-            <div class="form-group">
-                <label for="url">Enter Article URL:</label>
-                <input type="text" class="form-control" id="url" name="url" placeholder="https://example.com/article" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Summarize</button>
-        </form>
         <div id="summaryResult"></div>
+    </div>
+
+    <div class="container">
+        <h2>About</h2>
+        <div class="developer">
+            <img src="developer1.jpg" alt="David Njoroge">
+            <p><strong>David Njoroge</strong><br> Role: Backend Developer</p>
+        </div>
+        <div class="developer">
+            <img src="developer2.jpg" alt="James Mugambi">
+            <p><strong>James Mugambi</strong><br> Role: Frontend Developer</p>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
