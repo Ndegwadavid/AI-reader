@@ -17,5 +17,5 @@ requests==2.32.4
 scipy==1.12.0
 soupsieve==2.5
 tqdm==4.66.3
-urllib3==2.2.2
+urllib3==2.5.0
 Werkzeug==3.0.6
